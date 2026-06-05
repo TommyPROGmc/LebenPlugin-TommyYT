@@ -1,0 +1,39 @@
+name: LebenPlugin
+version: 1.0.0
+
+main: me.tommyyt.lebon.LebenPlugin
+
+api-version: '1.21'
+
+author: TommyYT_
+
+description: Professionelles 3-Leben System mit Combat-Tag und PlaceholderAPI
+
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  leben:
+    description: Zeigt deine Leben
+    usage: /leben [Spieler]
+    aliases:
+      - lives
+      - hp
+    permission: leben.use
+
+  lebengive:
+    description: Gibt Leben
+    usage: /lebengive <Spieler> <Anzahl>
+    permission: leben.admin
+
+  lebenreset:
+    description: Resettet Leben
+    usage: /lebenreset <Spieler>
+    permission: leben.admin
+
+permissions:
+  leben.use:
+    default: true
+
+  leben.admin:
+    default: op
